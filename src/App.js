@@ -1,14 +1,12 @@
 import React from 'react'
-// import WordFrequencyChart from './Components/WordFrequencyChart'
-import Apk1 from './Components/Apk1'
+import WordFrequencyChart from './Components/WordFrequencyChart'
 
 const App = () => {
   return (
     <div>
 
-      {/* <Apk/> */}
-      {/* <WordFrequencyChart/> */}
-      <Apk1/>
+      
+      <WordFrequencyChart/>
     </div>
   )
 }
