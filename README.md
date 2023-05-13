@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<!-- Code functioing beloww -->
+
+This code creates the Apk1 React component.
+
+The useState hook was used to initialise the component's data state variable to null. It also makes use of the useRef hook to make a reference to a canvas element.
+
+When the "Submit" button is clicked, the asynchronous fetchData method is called. It downloads the text from terriblytinytales.com/test.txt, separates it into words, and calculates the frequency of each word's occurrence. The top 20 words are then chosen after sorting the list of word frequency counts in descending order. The generated information is kept in the state variable data of the component.
+
+When the "Export" button is clicked, the handleExport function is invoked. It transforms the data in the data into a string using the PapaParse package.
+
+CSV format and then downloads the file using the file-saver library. The useEffect hook is used to draw the histogram chart using the Chart.js library. It listens for changes to the data state variable and redraws the chart when it changes. The chart is drawn on the canvas element using the data in data. Finally, the component returns a button that triggers the fetchData function when clicked. If data is not null, it also renders the canvas element and a "Export" button that triggers the handleExport function when clicked.
+
+
+
+It's also hosted on netlify Link:https://terrible-tiny-tales-assingment.netlify.app/
