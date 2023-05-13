@@ -71,16 +71,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 <!-- Code functioing beloww -->
 
-This code creates the Apk1 React component.
+This React component creates a chart that displays the frequency of the 20 words that appear most frequently in a text file. Using the get() function, the component downloads the text file from the URL "https://www.terriblytinytales.com/test.txt" and parses it into an array of words using the Papa.parse() function from the PapaParse package. The component then builds an object using a for loop to tally the frequency of each phrase and uses the sort() function to create an array of the 20 most frequent terms.
 
-The useState hook was used to initialise the component's data state variable to null. It also makes use of the useRef hook to make a reference to a canvas element.
-
-When the "Submit" button is clicked, the asynchronous fetchData method is called. It downloads the text from terriblytinytales.com/test.txt, separates it into words, and calculates the frequency of each word's occurrence. The top 20 words are then chosen after sorting the list of word frequency counts in descending order. The generated information is kept in the state variable data of the component.
-
-When the "Export" button is clicked, the handleExport function is invoked. It transforms the data in the data into a string using the PapaParse package.
-
-CSV format and then downloads the file using the file-saver library. The useEffect hook is used to draw the histogram chart using the Chart.js library. It listens for changes to the data state variable and redraws the chart when it changes. The chart is drawn on the canvas element using the data in data. Finally, the component returns a button that triggers the fetchData function when clicked. If data is not null, it also renders the canvas element and a "Export" button that triggers the handleExport function when clicked.
+The chart was created using the Chart.js library, a well-liked JavaScript charting library. With the word on the X-axis and the frequency on the Y-axis, the graph is a bar chart that displays the frequency of each word. The canvas element, which may be accessed using the useRef() hook, is used to generate the chart.
 
 
+The component also has a text input area where the user may insert custom text to create a chart, but this feature is not currently operational. A "Export" button on the component enables users to download the data as a CSV file using the FileSaver.js module.
 
-It's also hosted on netlify Link:https://terrible-tiny-tales-assingment.netlify.app/
+
+You can import this component into your React application and include it in your JSX code to use it. The input field and styling can then be adjusted as necessary. You don't need to add any further functionality because the component automatically collects the data when the "Submit" button is clicked. When the data has been fetched, the chart will be automatically displayed.
+
+
+It's also hosted on netlify Link:https://terrible-assingment.netlify.app/
